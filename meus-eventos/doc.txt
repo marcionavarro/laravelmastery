@@ -1,0 +1,34 @@
+<?php
+
+//Criando perfil e associando ao usuários
+
+//Salvando perfil pro usuário usando Active Record
+$p = \App\Models\Profile();
+$p->about = 'Sobre mim...';
+$p->phone = '99999999';
+$p->social_networks = 'social_networks';
+
+$u = \App\Models\User::find(1);
+
+$u->profile()->save($p);
+
+//Exemplo salvando perfil pro usuario usando Mass Assignment
+$p = [
+  'about' => 'Sobre mim...',
+  'phone' => '99999999',
+   'social_networks' => 'social_networks'
+];
+
+$u = \App\Models\User::find(1);
+
+$u->profile()->create($p);
+
+//Recuperando Perfil do usuario
+$u = \App\Models\User::find(1);
+$u->profile; // Retorna um Model Profile com as informações do perfil do usuário
+$u->profile(); //retorna o objeto HasOne que nos permite interagir com os dados da relação de 1-1
+
+//Recuperando User do perfil
+$u = \App\Models\Profile::find(1);
+$u->user; // Retorna um Model User com as informações do perfil do usuário
+$u->user(); //retorna o objeto HasOne que nos permite interagir com os dados da relação de 1-1

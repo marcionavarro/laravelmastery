@@ -1,0 +1,14 @@
+Teminado Bloco 1
+
+## Corrigir
+O E-mail de verificação de conta não chega no Gmail
+O E-mail de resetar senha está chegando apenas com o hash e não vem o link completo
+
+
+## Melhorias
+Tela de Tickets exibindo quais eventos o usuario esta escrito e os que não é do ticket deles
+Adicionar um novo evento a sua conta por meio do painel
+Adicionar na home a data de inicio e fim do evento, e explicar os dias dos eventos e os horarios
+Colocar uma tabela tickets com preços de eventos
+Adicionar o editor wiseway no textarea fale mais sobre o evento
+
